@@ -1,0 +1,27 @@
+[core]
+	autocrlf = true
+[user]
+	name = <NAME>
+	email = <Email>
+[push]
+	default = current
+[merge]
+	tool=p4merge
+[mergetool "p4merge"]
+    path = C:/Program Files/Perforce/p4merge.exe
+	keepBackup = false
+    trustExitCode = false
+	prompt = false
+
+[diff]
+	tool = p4merge
+
+[difftool "winmerge"]
+	name = WinMerge
+	trustExitCode = true
+	prompt = false
+	path = C:/Data/Apps/WinMerge
+	cmd = WinMergeU.exe -u -e $LOCAL $REMOTE
+
+[credential]
+helper = !'c:\\data\\apps\\git-credential-winstore.exe'
